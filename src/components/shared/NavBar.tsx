@@ -12,11 +12,18 @@ export default function Navbar() {
     const links = isAuth ? navBarAuth : navBarNoAuth;
 
     return (
-        <nav className="bg-dark w-full py-10 sm:px-72 backdrop-blur-md flex items-center justify-center xl:justify-between">
+        <nav className="bg-dark w-full py-10 sm:px-20 lg:px-72 backdrop-blur-md flex items-center justify-center xl:justify-between">
             <div className="hidden xl:block">
                 <Links linksList={links} isRow />
             </div>
-            <div className="flex sm:flex-row flex-col gap-5 items-center">
+            <div className="grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 gap-5 items-center">
+                {isAuth && (
+                    <Link href={"/notifications"}>
+                        <CustomButton theme={"secondary"}>
+                            Notifications
+                        </CustomButton>
+                    </Link>
+                )}
                 <Link href={isAuth ? "/share-code" : "/login"}>
                     <CustomButton theme={"secondary"}>
                         {isAuth ? "Share Code" : "Login"}
