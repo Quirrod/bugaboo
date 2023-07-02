@@ -1,0 +1,21 @@
+// import dynamic from "next/dynamic";
+  import { javascript } from "@codemirror/lang-javascript";
+import { dracula } from "@uiw/codemirror-theme-dracula";
+import { LineModel } from "@/models/@codemirror/LineModel";
+  // const CodeMirror = dynamic(() => import("@uiw/react-codemirror"), {
+//   ssr: false,
+// });
+  {/* <CodeMirror
+          value="console.log('hello world!');"
+          height="100svh"
+          width="40em"
+          theme={dracula}
+          extensions={[
+            javascript({ jsx: true }),
+            linesAddPlusGutter(handleComment, {
+              backgroundColor: "#3E404B",
+            }),
+          ]}
+          onChange={(value) => null}
+          placeholder={"// Enter your code here"}
+        /> */}
