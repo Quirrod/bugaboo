@@ -10,11 +10,6 @@ import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Bugaboo",
-  description: "Code reviews for everyone",
-};
-
 const queryClient = new QueryClient();
 
 export default function RootLayout({
